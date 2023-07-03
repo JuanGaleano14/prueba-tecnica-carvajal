@@ -3,6 +3,7 @@ import { AdminGuard } from './services/admin.guard';
 import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboard.component';
 import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
 import { LoginComponent } from './pages/login/login.component';
+import { ResetpassComponent } from './pages/resetpass/resetpass.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NgModule } from '@angular/core';
@@ -35,7 +36,12 @@ const routes: Routes = [
     component:UserDashboardComponent,
     pathMatch:'full',
     canActivate:[NormalGuard]
-  }
+  },
+  {
+    path : 'resetpass',
+    component : ResetpassComponent,
+    pathMatch : 'full'
+  },
 ];
 
 @NgModule({
